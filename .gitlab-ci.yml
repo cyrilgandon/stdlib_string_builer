@@ -1,0 +1,11 @@
+default:
+  image: registry.gitlab.com/everythingfunctional/dockerfpm
+
+stages:
+  - single_stage
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - fpm test
